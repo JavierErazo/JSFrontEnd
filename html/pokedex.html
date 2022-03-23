@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../js/pokedex.js"></script>
+    <title>POKÉDEX</title>
+</head>
+<body>
+      
+    <header class="flexboxCol">
+        <img src="../images/poke_logo.png" id="poke_logo">
+        <div id="input_item" class="flexbox">
+            <input id="pokeName_input" type="text" placeholder="E.g. pikachu or 25" >
+            <button id="search_button" onclick="fetchPokemon()">SEARCH</button>
+        </div>
+        
+    </header>
+    <main class="gridContainer">
+        <section id="left_grid_item" class="flexboxCol">
+            <div id="top_left" class="flexbox">    
+                <div id="top_lights" class="flexbox">
+                    <div id="big_light"></div>
+                    <div id="small_light_one" class="flexItem smallLight"></div>
+                    <div id="small_light_two" class="flexItem smallLight"></div>
+                    <div id="small_light_three" class="flexItem smallLight"></div>
+                    
+                </div>
+                
+                <div id="top_lights_right">
+
+                </div>
+            </div>
+            <div id="main_screen" class="flexbox">
+                <img id="pokeImg" src="../images/nodata.jpg">
+            </div>
+            <div id="buttons_one" class="flexbox">
+                <div id="big_button" class="circleButton"></div>
+                <div id="blue_button" class="longButton"></div>
+                <div id="red_button" class="longButton"></div>
+            </div>
+            <div id="buttons_two" class="flexbox">
+                <div id="name_screen" class="flexbox">
+                    <span id="pokemon_name"></span>
+                </div>
+                <img src="../images/dpad.png" id="dpad_button">
+            </div>
+        </section>
+        <section id="right_grid_item" class="flexboxCol">
+            <div id="top_right" class="flexbox">
+            </div>
+            <div id="info" class="flexboxCol">
+                <div id="types" class="flexbox">
+                    <span class="typeTitle">TYPE:</span>
+                    <span id="type_one" class="typeSpan"></span>
+                    <span id="type_two" class="typeSpan"></span>
+                </div>
+                <div id="stats" class="flexbox">
+                    <div id="stats_col_one">
+                        <span id="hp_name" class="statNameSpan">HP:</span>
+                        <span id="atk_name" class="statNameSpan">ATK:</span>
+                        <span id="def_name" class="statNameSpan">DEF:</span>    
+                    </div>
+                    <div id="stats_val_one">
+                        <span id="hp_val" class="statValSpan"></span>
+                        <span id="atk_val" class="statValSpan"></span>
+                        <span id="def_val" class="statValSpan"></span>
+                    </div>
+                    <div id="stats_col_two">
+                        <span id="spatk_name" class="statNameSpan">SP.ATK:</span>
+                        <span id="spdef_name" class="statNameSpan">SP.DEF:</span>
+                        <span id="spd_name" class="statNameSpan">SPD:</span>
+                    </div>
+                    <div id="stats_val_two">
+                        <span id="spatk_val" class="statValSpan"></span>
+                        <span id="spdef_val" class="statValSpan"></span>
+                        <span id="spd_val" class="statValSpan"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="buttons_three" class="flexbox">
+                <div class="gridWrapper">
+                    <div class="gridButton"></div>
+                    <div class="gridButton"></div>
+                    <div class="gridButton"></div>
+                    <div class="gridButton"></div>
+                    <div class="gridButton"></div>
+                    <div class="gridButton"></div>
+                    <div class="gridButton"></div>
+                    <div class="gridButton"></div>
+                    <div class="gridButton"></div>
+                    <div class="gridButton"></div>
+                </div>
+            </div>
+            <div id="moves" class="flexbox">
+                <table class="flexboxCol">
+                    <tr class="moveTitle">
+                        <th>MOVES</th>
+                    </tr>
+                    <tr>
+                        <td id="move_one" class="moveCell"></td>
+                        <td id="move_two" class="moveCell"></td>
+                    </tr>
+                    <tr>
+                        <td id="move_three" class="moveCell"></td>
+                        <td id="move_four" class="moveCell"></td>
+                    </tr>           
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
